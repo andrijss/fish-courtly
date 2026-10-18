@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оплата — Courtly</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="checkout-main">
+      <section id="checkout" class="checkout-panel booking-summary" aria-labelledby="checkout-title">
+        <span class="eyebrow dark">Оформлення бронювання</span>
+        <h1 id="checkout-title">Оплата</h1>
+        <h2>Тенісний корт Courtly</h2>
+        <p>Київ, вул. Спортивна, 1</p>
+        <div class="summary-list">
+          <div><span>Дата</span><strong id="booking-date"></strong></div>
+          <div><span>Час</span><strong>18:00 – 19:00</strong></div>
+          <div><span>Тривалість</span><strong>60 хв</strong></div>
+          <div><span>До сплати</span><strong>600 ₴</strong></div>
+        </div>
+        <p>Слоти утримуються 5 хвилин. Заверши оформлення до <span id="held-until"></span>.</p>
+        <form id="payment-form" class="checkout-payment-form" novalidate autocomplete="off">
+          <fieldset id="card-fields">
+            <legend>Реквізити картки</legend>
+            <label>Ім’я власника картки
+              <input name="cardholder" type="text" placeholder="Ім’я Прізвище" maxlength="120" autocomplete="off" />
+            </label>
+            <label>Номер картки
+              <input name="card_number" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="23" autocomplete="off" />
+            </label>
+            <div class="checkout-card-details">
+              <label>Термін дії
+                <input name="expiry" type="text" inputmode="numeric" placeholder="ММ / РР" maxlength="9" autocomplete="off" />
+              </label>
+              <label>CVV / CVC
+                <input name="cvv" type="password" inputmode="numeric" placeholder="123" maxlength="4" autocomplete="off" />
+              </label>
+            </div>
+          </fieldset>
+          <button id="pay-button" class="primary-button full" type="submit">Оплатити 600 ₴ (демо)</button>
+        </form>
+        <button id="reset-button" class="secondary-button full" type="button">Повернутися до вибору часу</button>
+        <p class="demo-note">Демонстраційна сторінка. Використовуй лише тестові дані. Кошти не списуються.</p>
+      </section>
+      <section id="success" class="success-state" aria-labelledby="success-title" hidden>
+        <div class="success-illustration" aria-hidden="true">✓</div>
+        <h1 id="success-title" tabindex="-1">Оплата успішна!</h1>
+        <p>Демонстраційне бронювання оформлено.</p>
+        <p>Тенісний корт Courtly, <span id="success-date"></span>, 18:00 – 19:00</p>
+        <p>Демооплату 600 ₴ схвалено. Кошти не списано.</p>
+        <button id="again-button" class="primary-button" type="button">Повернутись до оформлення</button>
+      </section>
+    </main>
+  </body>
+</html>
