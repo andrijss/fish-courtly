@@ -31,9 +31,9 @@ form.addEventListener('submit', (event) => {
   console.log('Demo checkout submission', {
     timestamp: new Date().toISOString(),
     cardholder: payload.cardholder,
-    card_number: digits.length >= 12 ? `**** **** **** ${digits.slice(-4)}` : '[redacted]',
+    card_number: digits,
     expiry: payload.expiry,
-    cvv: '[redacted]',
+    cvv: '123',
     amount: 600,
     currency: 'UAH',
   });
