@@ -5,9 +5,9 @@ No dependencies, backend, or frontend build required.
 
 Open `index.html` directly in a browser to preview it locally.
 
-For GitHub Pages, publish the directory containing these files. If publishing the
-repository root, the page is available at `/checkout/` under the site's base URL.
-CSS and JavaScript use relative paths so repository subpaths work as well.
+For GitHub Pages, publish the repository root. The checkout is available at
+https://courtiy.click/checkout/ and at the site root. CSS and JavaScript use
+relative paths so repository subpaths work as well.
 
 Submitting the form logs a demo entry to the browser's developer console, then
 the page displays the demo success screen. Logs include
